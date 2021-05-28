@@ -1,0 +1,36 @@
+.footer {
+    background-color: #ff485b;
+}
+
+.footer > div {
+    width: 80%;
+    display: grid;
+    grid-auto-flow: column;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px 15px 0 15px;
+}
+
+.footer ul {
+    list-style: none;
+
+}
+
+.footer li {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 2.428571;
+}
+
+.footer li:hover {
+    text-decoration-line: underline;
+}
+
+.footer div:last-child {
+    width: 100%;
+    background-color: #de2c3e;
+    color: white;
+    padding: 7px;
+}

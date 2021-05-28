@@ -1,0 +1,136 @@
+
+button:target {
+    background-color: #b9b3b3;
+}
+
+.title {
+    background-image: url('./../../assets/img/menuBg.jpg');
+    height: 300px;
+    text-transform: uppercase;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 53px;
+    color: white;
+    font-weight: bold;
+}
+
+.imgChoice img {
+    width: 105px!important;
+    cursor: pointer;
+    align-self: end;
+}
+
+.imgChoice {
+    
+    display: grid;
+    grid-auto-flow: column;
+    width: 70%;
+    margin: 30px auto;
+    align-items: center;
+    column-gap: 51px;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.imgChoice > div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 170px;
+    width: 169px;
+}
+
+.imgChoice h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    align-self: end;
+}
+.menuBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: 50px auto;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.33vw;
+    color: #87e1d8;
+}
+
+p {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    line-height: 1.428571429;
+    color: #6c3f21;
+    cursor: text;
+}
+
+.menuBlock img {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.menuBlock button {
+    background-color: #f51b06c2;
+    border: 6px double white;
+    color: white;
+    font-family: 'Circe', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.01px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 40px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.item {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.item img { 
+    width: 300px;
+    height: 250px;
+}
+
+.modal {
+    background-color: white !important;
+    height: 70vh;
+    width: 50vh;
+    margin: 5% auto;
+    padding: 0px;
+    display: grid;
+}
+
+.modal img {
+    width: 250px;
+}
+
+.modalWindow {
+    background-color: white !important;
+}
+
+.block {
+    display: grid;
+    row-gap: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.block img {
+    margin: 0 auto;
+}
