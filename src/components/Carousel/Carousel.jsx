@@ -18,7 +18,7 @@ const Carousel = () => {
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                     <img  className={styles.bg} src={img1} class="d-block w-100" height='650px' alt="#" />
-                    <div className={styles.carouselCaption} className="carousel-caption d-none d-md-block">
+                    <div className={styles.carouselCaption} className="carousel-caption d-md-block">
                         <p className={styles.caption}> Peanut butter and <br/>Jelly cupcakes</p>
                         <h6 className={styles.availableTime}> Available May 6th – May 30th</h6>
                         <button className={styles.btnRedirect}> Order now </button>
@@ -26,21 +26,21 @@ const Carousel = () => {
                     </div>
                     <div class="carousel-item">
                     <img className={styles.bg} src={img2} class="d-block w-100" height='650px'  alt="#" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <p className={styles.caption}> <b>7 LAYER BARS </b> <br/> Baked with chocolate and butterscotch chips </p>
                         <button className={styles.btnRedirect}> Order now </button>
                     </div>
                     </div>
                     <div class="carousel-item">
                     <img className={styles.bg} src={img3} class="d-block w-100" height='650px'  alt="#" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                         <p className={styles.caption}> Wedding Cakes!<br/>Customized with your choice of cake flavor, filling and frosting</p> 
                         <button className={styles.btnRedirect}> Order now </button>
                     </div>
                     </div>
                     <div class="carousel-item">
                     <img className={styles.bg} src={img4} class="d-block w-100" height='650px'  alt="#" />
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block">
                     <p className={styles.caption}> Contact us for more information about creating the wedding cake of your dreams. </p>
                         <button className={styles.btnRedirect}> Order now </button>
                     </div>

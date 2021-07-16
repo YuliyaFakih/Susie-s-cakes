@@ -1,0 +1,93 @@
+.navigationMenu {
+    display: none;
+    top:0;
+    left:0;
+    position: fixed;
+    height: 100vh;
+    width:40%;
+    background: #f54555f0;
+    z-index: 1;
+    overflow: auto;
+}
+.navigationMenuList {
+    display: grid;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.navigationMenuList a {
+    color: #ffffff;
+}
+.navigationMenuList a:hover {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.navGrid {
+    display: grid;
+    grid-auto-flow: column;
+    width: 80%;
+    margin: auto;
+}
+
+.navGrid img {
+    width: 45px;
+    height: 45px;
+    margin-left: auto;
+    margin-top: 20px;
+    position: fixed;
+    top:0;
+    left: 30%;
+}
+
+@media (max-width: 700px) {
+    .navigationMenuList{
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .navigationMenu {
+        width: 50%;
+    }
+    .navGrid img {
+        left: 38%;
+    }
+}
+
+@media (max-width: 525px) {
+    .navigationMenu {
+        width: 60%;
+    }
+    .navGrid img {
+        left: 48%;
+    }
+}
+
+@media (max-width: 400px) {
+    .sections .navigationMenuList a {
+        font-size: 17px !important;
+    }
+    .navGrid img {
+        width: 40px;
+        height: 40px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navigationMenu {
+        width: 70%;
+    }
+    .navGrid img {
+        left: 55%;
+    }
+}
+@media (max-width: 340px) {
+    .navigationMenu {
+        width: 75%;
+    }
+    .navGrid img {
+        left: 60%;
+    }
+}

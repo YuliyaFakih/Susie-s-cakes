@@ -10,14 +10,17 @@ const Cart = () => {
         const newTotalPrice = totalPrice.map((item, idx) => idx === index ? {...item, count: event.currentTarget.value} : item)
         setTotalPrice(newTotalPrice)
     }
+
     const removeCart = (id) => {
-        debugger
-        const newCatalog = catalogData.map((item) => item.id === id ? {...item, inCart: false} : item)
+        const newCatalog = [catalogData]
+        newCatalog.forEach((item, index, arr) => {
+            console.log(item.id === id)
+            if(item.id === id) {
+                item.inCart = false
+            }
+        })
+        setCatalogData({...newCatalog})
         console.log(newCatalog)
-        //catalogData[type] = newCatalog
-        //console.log(catalogData[type]) 
-        setCatalogData(newCatalog)
-        
     }
     return (
         

@@ -72,26 +72,31 @@ const Menu = () => {
     }, [catalogData])
 
     const addInCart = (id, type) => {
-        
-        const newCatalog = catalogData[type].map((item) => item.id === id ? {...item, inCart: true} : item)
+        const newCatalog =  catalogData
+        newCatalog[type].forEach((item, index, arr) => {
+            console.log(item.id === id)
+            if(item.id === id) {
+                item.inCart = true
+            }
+        })
+         
+        setCatalogData({...newCatalog})
         console.log(newCatalog)
-        catalogData[type] = newCatalog
-        setCatalogData({...catalogData})
-        console.log(catalogData[type])
-        return (
-            <Cart catalogData={catalogData} setCatalogData={setCatalogData} />
-        )
         
     }
 
     const removeCart = (id, type) => {
-        const newCatalog = catalogData[type].map((item) => item.id === id ? {...item, inCart: false} : item)
+        const newCatalog = catalogData
+        newCatalog[type].forEach((item, index, arr) => {
+            console.log(item.id === id)
+            if(item.id === id) {
+                item.inCart = false
+            }
+        })
+        setCatalogData({...newCatalog})
         console.log(newCatalog)
-        catalogData[type] = newCatalog
-        setCatalogData({...catalogData})
-        console.log(catalogData[type])
         return (
-            <Cart catalogData={catalogData} setCatalogData={setCatalogData} />
+            <Cart type={type} />
         )
     }
 
@@ -100,7 +105,7 @@ const Menu = () => {
 
     const openMenuCake = (type, id) => {
         console.log(catalogData[type])
-        debugger
+        
         return (
             //<NavLink to='/cart'> 
                 <div className={styles.menuBlock}>

@@ -37,3 +37,39 @@
     color: red;
     font-size: 28px;
 }
+
+@media (max-width: 800px) {
+    .carousel p {
+        font-size: 46px;
+        line-height: 66px;
+    }
+    .carousel h6 {
+        font-size: 23px;
+    }
+    .carousel button {
+        font-size: 16px;
+        line-height: 17.01px;
+        padding: 14px 24px;
+    }
+
+    .carousel-caption {
+        display: block!important;
+        left: 20%;
+    }
+    
+}
+
+@media (max-width: 660px) {
+    .carousel p {
+        font-size: 37px;
+        line-height: 55px;
+    }
+}
+
+@media (max-width: 425px) {
+    .carousel p {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: bolder;
+    }
+}
