@@ -85,8 +85,24 @@ const Menu = () => {
     }
 
     const removeCart = (id, type) => {
-        const newCatalog = catalogData
+        /*const newCatalog = [...catalogData]
+        newCatalog && Object.values(newCatalog).flat().filter(item => item.id === id).forEach((item, index, arr) => {
+            item.inCart = false
+            item.count = 0
+        })
+        setCatalogData({...newCatalog})     */   
+        const newCatalog =  catalogData
+        
         newCatalog[type].forEach((item, index, arr) => {
+            console.log(item.id === id)
+            if(item.id === id) {
+                item.inCart = false
+                item.count = 0
+            }
+        })
+        setCatalogData({...newCatalog})
+        console.log(newCatalog)
+        /*newCatalog[type].forEach((item, index, arr) => {
             console.log(item.id === id)
             if(item.id === id) {
                 item.inCart = false
@@ -96,7 +112,7 @@ const Menu = () => {
         console.log(newCatalog)
         return (
             <Cart type={type} />
-        )
+        )*/
     }
 
     const [open, setOpen] = React.useState(false)
@@ -113,7 +129,7 @@ const Menu = () => {
                             <h3> {item.name} </h3>
                             <p> {item.description} </p>
                             <p> <b> {item.price} </b></p>
-                            <button onClick={() => addInCart(item.id, type) }> Order </button>
+                            <button onClick={() => addInCart(item.id, type)} style={{backgroundColor:(catalogData && Object.values(catalogData).flat().filter(item => item.inCart).find(element => element && element.id === item.id) ? "#15ad64" : "#f51b06c2")}}> Order </button>
                             <button onClick={() => removeCart(item.id, type) }> Remove </button>
                             <Modal id={item.id} catalogData={catalogData[type]} open={open} setOpen={setOpen}/> 
                         </div>

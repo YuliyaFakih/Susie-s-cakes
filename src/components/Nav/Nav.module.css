@@ -20,7 +20,7 @@
     line-height: 21.01px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 0px 2px;
     border-radius: 40px;
     margin-right: 15px;
 }
@@ -141,7 +141,7 @@
     }
     .navigation button {
         font-size: 14px;
-        padding: 4px 10px;
+        padding: -2px 7px;
     }
 
 }

@@ -45,7 +45,7 @@ const Nav = () => {
                 <NavLink to='/cart'>
                     <img className={styles.cart} src={cart} alt="#" />
                 </NavLink>
-                <button className={styles.orderBtn}> Order </button>
+                <button className={styles.orderBtn}> <NavLink to="/menu"> Order </NavLink> </button>
                 <div className={styles.btnMore}>
                         <div onClick={OpenMenu}>
                             <div className={styles.line}></div>
@@ -77,38 +77,3 @@ const Nav = () => {
 }
 
 export default Nav;
-/*
-<Menu
-                        id="simple-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={Boolean(anchorEl)}
-                        onClose={handleClose}
-                    >
-                        <MenuItem onClick={handleClose}>
-                            <NavLink to='/decorations' className={styles.link}>
-                            Decorations
-                            </NavLink>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                        <NavLink to='/careers' className={styles.link}>
-                            Careers
-                        </NavLink>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                        <NavLink to='/weddings' className={styles.link2}>
-                            Weddings
-                        </NavLink>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                        <NavLink to='/menu' className={styles.link2}>  
-                            Menu
-                        </NavLink>
-                        </MenuItem>
-                        <MenuItem onClick={handleClose}>
-                        <NavLink to='/about' className={styles.link2}>
-                            About
-                        </NavLink>
-                        </MenuItem>
-                    </Menu>
-                    */
