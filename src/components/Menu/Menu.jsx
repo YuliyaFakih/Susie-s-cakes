@@ -32,40 +32,39 @@ import Modal from './Modal'
 const Menu = () => {
     const catalog = JSON.parse(localStorage.getItem('catalog')) || {
         cakesArr: [
-            {id: uuid(), name: 'Old-Fashioned 6-Layer Chocolate Cake', img: cakeChoice1, description: '“Just like you remember!” Towering high, moist chocolate cake filled and covered in rich, dark chocolate buttercream frosting.', price: '20$', inCart: false},
-            {id: uuid(), name: 'Vanilla Celebration Cake', img: cakeChoice2, description:'6-layers of vanilla cake baked with colorful sugar confetti, filled & frosted with our signature retro-blue vanilla frosting.', price: '18$', inCart: false},
-            {id: uuid(), name: 'Susie’s Famous Southern Red Velvet', img: cakeChoice3, description: 'Deep red, moist cake lightly flavored with cocoa, filled & topped with traditional cream cheese frosting. Our best seller!', price: '25$', inCart: false},
-            {id: uuid(), name:'Carrot Cake', img: cakeChoice4, description:'Baked with pecans & golden raisins, layered with our unique “praline filling” & topped with traditional cream cheese frosting.', price: '30$', inCart: false},
-            {id: uuid(), name: 'Tropical Coconut Cake', img: cakeChoice5, description:'Vanilla cake layered with pineapple accented coconut filling &amp; topped with fluffy coconut buttercream &amp; shredded coconut.', price: '27$', inCart: false}
+            {id: uuid(), name: 'Old-Fashioned 6-Layer Chocolate Cake', img: cakeChoice1, description: '“Just like you remember!” Towering high, moist chocolate cake filled and covered in rich, dark chocolate buttercream frosting.', price: '20$', inCart: false, count: 0},
+            {id: uuid(), name: 'Vanilla Celebration Cake', img: cakeChoice2, description:'6-layers of vanilla cake baked with colorful sugar confetti, filled & frosted with our signature retro-blue vanilla frosting.', price: '18$', inCart: false, count: 0},
+            {id: uuid(), name: 'Susie’s Famous Southern Red Velvet', img: cakeChoice3, description: 'Deep red, moist cake lightly flavored with cocoa, filled & topped with traditional cream cheese frosting. Our best seller!', price: '25$', inCart: false, count: 0},
+            {id: uuid(), name:'Carrot Cake', img: cakeChoice4, description:'Baked with pecans & golden raisins, layered with our unique “praline filling” & topped with traditional cream cheese frosting.', price: '30$', inCart: false, count: 0},
+            {id: uuid(), name: 'Tropical Coconut Cake', img: cakeChoice5, description:'Vanilla cake layered with pineapple accented coconut filling &amp; topped with fluffy coconut buttercream &amp; shredded coconut.', price: '27$', inCart: false, count: 0}
         ],
         cupcakesArr: [
-            {id: uuid(), name: 'Peanut Butter &amp; Jelly Cupcake', img: cupcakeChoice1, description: 'Grape jelly swirled into vanilla cake batter, topped with peanut butter buttercream and a jelly swirl', price: '5$', inCart: false},
-            {id: uuid(), name: 'Chocolate Cupcake', img: cupcakeChoice2, description: 'This chocolate cupcake recipe makes perfect moist, fudgey, fluffy chocolate cupcakes topped with silky chocolate Swiss meringue buttercream.', price: '7$', inCart: false},
-            {id: uuid(), name: 'Flourless Chocolate Cupcake', img: cupcakeChoice3, description: 'These small but rich flourless chocolate cupcakes made with whipped meringue are so moist and fudgy they will stick to your fingers.', price: '4$', inCart: false},
-            {id: uuid(), name: 'Coconut cupcake', img: cupcakeChoice4, description: 'Delicate coconut cupcakes topped with vanilla cream cheese frosting and sweetened shredded coconut.', price: '6$', inCart: false},
-            {id: uuid(), name: 'Mini Cupcakes', img: cupcakeChoice5, description: 'Available in Red Velvet, Vanilla, Chocolate, and Flourless Chocolate', price: '10$', inCart: false}
+            {id: uuid(), name: 'Peanut Butter &amp; Jelly Cupcake', img: cupcakeChoice1, description: 'Grape jelly swirled into vanilla cake batter, topped with peanut butter buttercream and a jelly swirl', price: '5$', inCart: false, count: 0},
+            {id: uuid(), name: 'Chocolate Cupcake', img: cupcakeChoice2, description: 'This chocolate cupcake recipe makes perfect moist, fudgey, fluffy chocolate cupcakes topped with silky chocolate Swiss meringue buttercream.', price: '7$', inCart: false, count: 0},
+            {id: uuid(), name: 'Flourless Chocolate Cupcake', img: cupcakeChoice3, description: 'These small but rich flourless chocolate cupcakes made with whipped meringue are so moist and fudgy they will stick to your fingers.', price: '4$', inCart: false, count: 0},
+            {id: uuid(), name: 'Coconut cupcake', img: cupcakeChoice4, description: 'Delicate coconut cupcakes topped with vanilla cream cheese frosting and sweetened shredded coconut.', price: '6$', inCart: false, count: 0},
+            {id: uuid(), name: 'Mini Cupcakes', img: cupcakeChoice5, description: 'Available in Red Velvet, Vanilla, Chocolate, and Flourless Chocolate', price: '10$', inCart: false, count: 0}
 
         ],
-
         cookiesArr: [
-            {id: uuid(), name: '7-layer bars', img: cookieChoice1, description: 'Baked with chocolate chips, coconut, &amp; pecans on a graham cracker crust', price: '10$', inCart: false}, 
-            {id: uuid(), name:'Chocolate chip cookies', img: cookieChoice2, description:'Everyone’s favorite treat! Baked with brown sugar, butter and semi-sweet chocolate chips', price: '5$', inCart: false},
-            {id: uuid(), name: 'Molasses Cookie', img: cookieChoice3, description: 'Drizzled with icing!', price: '8$', inCart: false},
-            {id: uuid(), name: 'Fruit Crumble Bar', img: cookieChoice4, description:'Blueberry filling baked on a shortbread crust topped with crumble. Made without dairy &amp; eggs.', price: '13$', inCart: false},
-            {id: uuid(), name: 'Whoopie pies', img: cookieChoice5, description: 'Susie’s exclusive! Two thick, chewy chocolate cookies sandwiched with vanilla buttercream', price: '15$', inCart: false}
+            {id: uuid(), name: '7-layer bars', img: cookieChoice1, description: 'Baked with chocolate chips, coconut, &amp; pecans on a graham cracker crust', price: '10$', inCart: false, count: 0}, 
+            {id: uuid(), name:'Chocolate chip cookies', img: cookieChoice2, description:'Everyone’s favorite treat! Baked with brown sugar, butter and semi-sweet chocolate chips', price: '5$', inCart: false, count: 0},
+            {id: uuid(), name: 'Molasses Cookie', img: cookieChoice3, description: 'Drizzled with icing!', price: '8$', inCart: false, count: 0},
+            {id: uuid(), name: 'Fruit Crumble Bar', img: cookieChoice4, description:'Blueberry filling baked on a shortbread crust topped with crumble. Made without dairy &amp; eggs.', price: '13$', inCart: false, count: 0},
+            {id: uuid(), name: 'Whoopie pies', img: cookieChoice5, description: 'Susie’s exclusive! Two thick, chewy chocolate cookies sandwiched with vanilla buttercream', price: '15$', inCart: false, count: 0}
         ],
-
         piesArr : [
-            {id: uuid(), name: 'Banana Cream Pie', img: pieChoice1, description: `A flaky pie crust is filled with fresh bananas and a rich creamy vanilla layer. It's all topped off with whipped topping.`, price: '25$', inCart: false},
-            {id: uuid(), name:`Hershey's Creamy Milk Chocolate Pudding Pie`, img: pieChoice2, description: 'This chocolate pudding comes out so smooth and creamy, and the pie filling is easy to make from scratch.', price: '20$', inCart: false},
-            {id: uuid(), name: 'Chocolate and vanilla pudding pie', img: pieChoice3, description: 'This sweet-tooth-satisfying dessert is light with just enough sugar to kick your craving—we love it when we don’t have to feel guilty about consuming chocolate and vanilla. ', price: '18$', inCart: false},
-            {id: uuid(), name: 'Tart Cherry Lattice Pie', img: pieChoice4, description: 'Tart cherries have a sweet and sour flavour while they other ones are popular for their sweetness which may range from mild to intense.', price: '10$', inCart: false},
-            {id: uuid(), name: 'Summer Fruit Tart', img: pieChoice5, description: 'This tart includes a sweet, cookie-like crust, creamy lemon filing and can be topped with any assortment of fruit you like.', price: '18$', inCart: false}
+            {id: uuid(), name: 'Banana Cream Pie', img: pieChoice1, description: `A flaky pie crust is filled with fresh bananas and a rich creamy vanilla layer. It's all topped off with whipped topping.`, price: '25$', inCart: false, count: 0},
+            {id: uuid(), name:`Hershey's Creamy Milk Chocolate Pudding Pie`, img: pieChoice2, description: 'This chocolate pudding comes out so smooth and creamy, and the pie filling is easy to make from scratch.', price: '20$', inCart: false, count: 0},
+            {id: uuid(), name: 'Chocolate and vanilla pudding pie', img: pieChoice3, description: 'This sweet-tooth-satisfying dessert is light with just enough sugar to kick your craving—we love it when we don’t have to feel guilty about consuming chocolate and vanilla. ', price: '18$', inCart: false, count: 0},
+            {id: uuid(), name: 'Tart Cherry Lattice Pie', img: pieChoice4, description: 'Tart cherries have a sweet and sour flavour while they other ones are popular for their sweetness which may range from mild to intense.', price: '10$', inCart: false, count: 0},
+            {id: uuid(), name: 'Summer Fruit Tart', img: pieChoice5, description: 'This tart includes a sweet, cookie-like crust, creamy lemon filing and can be topped with any assortment of fruit you like.', price: '18$', inCart: false, count: 0}
         ]
     }
 
     const [state, setState] = React.useState({cakesArr:false, cupcakesArr: false, cookiesArr:false, piesArr: false})
     const [catalogData, setCatalogData] = React.useState(catalog)
+    
 
     React.useEffect(() => {
         localStorage.setItem('catalog', JSON.stringify(catalogData))
@@ -73,16 +72,16 @@ const Menu = () => {
 
     const addInCart = (id, type) => {
         const newCatalog =  catalogData
+        
         newCatalog[type].forEach((item, index, arr) => {
             console.log(item.id === id)
             if(item.id === id) {
                 item.inCart = true
+                item.count = 1
             }
         })
-         
         setCatalogData({...newCatalog})
         console.log(newCatalog)
-        
     }
 
     const removeCart = (id, type) => {
@@ -101,7 +100,6 @@ const Menu = () => {
     }
 
     const [open, setOpen] = React.useState(false)
-    
 
     const openMenuCake = (type, id) => {
         console.log(catalogData[type])

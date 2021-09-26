@@ -4,6 +4,7 @@ import img2 from '../../assets/img/cake2.jpg'
 import img3 from '../../assets/img/cake3.jpg'
 import img4 from '../../assets/img/cake4.jpg'
 import styles from './Carousel.module.css'
+import classes from './style.css'
 
 const Carousel = () => {
     return (

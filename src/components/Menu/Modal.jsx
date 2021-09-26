@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import styles from './Menu.module.css'
 
 export default ({id, catalogData, open , setOpen}) => {
-    debugger
+    
     return (
         <Modal className={styles.modal}
         open={open}
